@@ -10,7 +10,9 @@
     "test": "tsc --noEmit",
     "prepublishOnly": "npm run build",
     "release": "npm run docs && npx standard-version",
-    "docs": "npx docs-ts"
+    "docs": "npx docs-ts",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -30,13 +32,23 @@
   "peerDependencies": {
     "@nll/css": "^8.4.0",
     "@nll/datum": "^2.2.1",
+    "fp-ts": "^2.0.5",
     "preact": "^10.0.0-rc.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.5",
     "@nll/css": "^8.4.0",
     "@nll/datum": "^2.2.1",
+    "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-links": "^5.1.11",
+    "@storybook/addons": "^5.1.11",
+    "@storybook/preact": "^5.1.11",
+    "@types/node": "^12.7.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
     "preact": "^10.0.0-rc.1",
     "standard-version": "^7.0.0",
     "typescript": "^3.5.3"
-  }
+  },
+  "dependencies": {}
 }
