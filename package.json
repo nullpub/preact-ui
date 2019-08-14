@@ -1,0 +1,42 @@
+{
+  "name": "@nll/preact-ui",
+  "version": "1.0.0",
+  "description": "General preact components using @nll/css",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "npm run build-es6 && npm run build-lib",
+    "build-es6": "tsc",
+    "build-lib": "tsc --build tsconfig.lib.json",
+    "test": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "release": "npm run docs && npx standard-version",
+    "docs": "npx docs-ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nullpub/preact-ui.git"
+  },
+  "keywords": [
+    "preact",
+    "ui",
+    "css"
+  ],
+  "author": "Brandon Blaylock <brandon@null.pub> (https://blaylock.dev)",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/nullpub/preact-ui/issues"
+  },
+  "homepage": "https://github.com/nullpub/preact-ui#readme",
+  "peerDependencies": {
+    "@nll/css": "^8.4.0",
+    "@nll/datum": "^2.2.1",
+    "preact": "^10.0.0-rc.1"
+  },
+  "devDependencies": {
+    "@nll/css": "^8.4.0",
+    "@nll/datum": "^2.2.1",
+    "preact": "^10.0.0-rc.1",
+    "standard-version": "^7.0.0",
+    "typescript": "^3.5.3"
+  }
+}
